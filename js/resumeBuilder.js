@@ -1,19 +1,3 @@
-/*$("#main").append("Christopher Bijalba");
-
-var awesomeThoughts = "I am Christopher Bijalba and I am AWESOME!"
-console.log(awesomeThoughts);
-
-var funThoughts = awesomeThoughts.replace("AWESOME", "FUN");
-
-$("#main").append(funThoughts);
-
-var name = "Christopher Bijalba";
-var role = "Typographer";
-
-var skills = [];
-
-$("#main").append(skills[0]);*/
-
 var bio = {
 	"name" : "Christopher",
 	"role" : "Typographer",
@@ -24,42 +8,47 @@ var bio = {
 		"twitter": "@bijalba",
 		"location": "Chicago"
 	},
-	"welcome" : "Hello, weird.",
-	"skills" : [
-	"awesomeness", "programming", "teaching", "JS"
-	],
-	"bioPic": "images/fry.jpg"
+	"welcomeMessage" : "Hello, weird.",
+	"skills" : ["awesomeness", "programming", "teaching", "JS"]
 };
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+var education = { 
+	"schools": [
+	{
+		"name": "Eckerd College",
+		"location": "Saint Petersburg, FL, US",
+		"degree": "BA",
+		"majors" : ["CompSci", "French"],
+		"minor" : ["Rap"],
+		"url" : "http://id.iit.edu",
+		"dates" : "2000-2005"
+	}],
+	"onlineCourses": [
+	{
+		"title": "iOS Nerd",
+		"school": "Udacity",
+		"url" : "http://www.udacity.com",
+		"dates" : "2010-2015"
+	}]
+};
 
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
+var work = {
+	"jobs" : [
+	{
+		"employer":"Lincoln Park Zoo",
+		"title":"Internet Technology Manager",
+		"location":"Chicago",
+		"dates":"2005-2015",
+		"description":"In charge of nothing much."
+	}]
+};
 
-
-$("#main").append(bio.contacts.mobile);
-$("#main").append(bio.contacts.email);
-$("#main").append(bio.contacts.github);
-$("#main").append(bio.contacts.twitter);
-$("#main").append(bio.contacts.location);
-$("#main").append(bio.contacts.welcome);
-$("#main").append(bio.skills[0]);
-$("#main").append(bio.skills[1]);
-$("#main").append(bio.skills[2]);
-$("#main").append(bio.skills[3]);
-$("#main").append(bio.contacts.biopic);
-
-var work = { };
-var education = { };
-work.position = "Internet Technology Manager";
-work.employer = "Lincoln Park Zoo";
-work.years = 10;
-work.city = "Chicago";
-
-education["name"] = "Institute of Design";
-education["years"] = 4;
-education["city"] = "Chicago";
-
-$("#main").append(work["position"]);
-$("#main").append(education.name);
+var projects = {
+	"projects" : [
+	{
+		"title":"Website",
+		"dates":"2004-2015",
+		"description":"Underwhelming.",
+		"images" : ["http://jsonlint.com/c/images/logo_arc90.png"]
+	}]
+};
