@@ -52,3 +52,13 @@ var projects = {
 		"images" : ["http://jsonlint.com/c/images/logo_arc90.png"]
 	}]
 };
+
+//var formattedName = HTMLheaderName.replace("%data%", bio.name);
+if (bio.skills.length > 0) {
+	$("#header").append(HTMLskillsStart);
+	var singleItem="";
+	for (var i = 0; i < bio.skills.length; i++){
+		singleItem=HTMLskills.replace("%data%",bio.skills[i])
+		$("#skills").append(singleItem);
+	}
+}
