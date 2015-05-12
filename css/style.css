@@ -1,16 +1,39 @@
 * {
-  padding:0;
-  margin:0;
-  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+#main {
+  margin: 0 auto;
+  width: 700px;
+}
+
+button {
+  float: right;
+}
+#header {
+  margin-top: 50px;
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .clearfix {
   overflow: auto;
 }
 
-.education-entry, .work-entry, .project-entry {
-  padding-left: 5%;
-  padding-right: 5%;
+.contact-title {
+  font-size: 11px;
+  margin-right: 10px;
+  color: #999999;
+
+}
+.contact-data {
+  font-size: 11px;
+  color: #cccccc;
 }
 
 h1 {
@@ -18,34 +41,21 @@ h1 {
   color: #F5A623;
   line-height: 48px;
   display: inline;
+  margin: 0 20px 0 0;
 }
 
 h2 {
-  font-weight: bold;
   font-size: 24px;
   color: #999999;
   line-height: 29px;
-  padding: 10px;
+  margin: 50px 0 20px 0;
+  font-weight: normal;
 }
 
 h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #000000;
-  line-height: 22px;
-}
-
-h4 {
-  font-weight: bold;
-  font-size: 14px;
-  color: #4A4A4A;
-  line-height: 17px;
-}
-
-h2, h3, h4, h5 {
-  padding:10px;
-  padding-left: 5%;
-  padding-right: 5%;
+  font-size: 18px;
+  color: #cccccc;
+  margin: 20px 15px 0 0;
 }
 
 
@@ -53,70 +63,62 @@ h2, h3, h4, h5 {
   font-style: italic;
   font-size: 14px;
   color: #999999;
-  line-height: 16px;
-  float: left;
+  margin: 0 20px 25px 0;
+  display: inline;
+}
+
+div#projects div.project-entry div.date-text {
+  display: block;
 }
 
 .location-text {
   font-style: italic;
   font-size: 14px;
   color: #999999;
-  line-height: 16px;
-  float: right;
-
+  display: inline;
+  margin-bottom: 25px;
 }
 
 p {
   font-size: 14px;
   color: #333333;
-  line-height: 21px;
+  line-height: 24px;
 }
 
 a {
-  color: #1199C3;
+  color: #ff9900;
   text-decoration: none;
+}
+
+.work-entry, .project-entry {
   margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+
+div.work-entry a, div.project-entry a {
+  font-size: 25px;
   display: block;
 }
 
+div.project-entry:last-child, div.work-entry:last-child, div.education-entry:last-child {
+  padding-bottom: 20px;
+  border-bottom: 1px black solid;
+}
+
+
 .welcome-message {
+  font-family: "Georgia", serif;
   font-style: italic;
-  font-size: 18px;
-  color: #F3F3F3;
-  line-height: 28px;
+  font-size: 36px;
+  color: #222222;
+  margin-top: 50px;
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color: #ff9900;
   display: none;
-}
-
-.orange {
-  background-color: #F5AE23;
-}
-
-.orange-text {
-  color: #F5AE23;
-}
-
-.white-text {
-  font-weight: bold;
-  color: #FFFFFF;
-}
-
-.gray {
-  background-color: #F3F3F3;
-  padding-bottom: 10px;
-  clear:both;
-}
-
-.dark-gray {
-  background-color: #4A4A4A;
-}
-
-/* TODO: Replace with image later */
-#header {
-  background-color: #484848;
+  margin-bottom: 10px;
 }
 
 .flex-box {
@@ -124,92 +126,64 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
-}
-
-.center-content {
-  padding-top: 2.5%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 2.5%
+  justify-content: space-between;
 }
 
 ul {
   list-style-type: none;
+  margin-bottom: 50px;
 }
 
 .biopic {
   float: left;
-  padding: 10px;
   width: 200px;
   display: none;
+  margin-right: 50px;
 }
 
 img {
-  padding: 10px;
-}
-
-/* Bar chart stuff */
-.chart div {
-  font: 10px sans-serif;
-  background-color: #4A4A4A;
-  text-align: right;
-  padding: 3px;
-  margin: 1px;
-  height: 12px;
-  color: white;
-  display: inline-block;
-}
-
-span {
-  padding: 5px;
+  margin: 0 10px 8px 0;
 }
 
 #letsConnect {
-  text-align: center;
-}
-
-@media only screen and (max-width: 1024px) {
-  #letsConnect {
-    margin-top: 5%;
-  }
-}
-
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  #letsConnect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
+    display: inline-block;
+    margin-top: 20px;
 }
 
 #map {
   display: block;
   height: 100%;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 100%;
 }
 
 #mapDiv {
   height: 400px;
   width: 100%;
-  padding-bottom: 5%;
 }
 
-@media only screen and (min-width: 750px) {
-  #skillsH3,
-  .biopic {
+#skillsH3, .biopic {
     display: block;
+}
+
+
+@media only screen and (max-width: 750px) {
+  div#main {
+    padding: 20px;
+    width: 80%;
+  }
+  ul#skills, ul#topcontacts {
+    display:block;
+  }
+
+  
+  div#main div#header img {
+    display: none;
+  }
+
+  .biopic {
+    width: 150px;
+  }
+  .welcome-message {
+    display: none;
   }
 }
